@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Google Classroom Assistant",
+    "description": "Helps students in Google Classroom with instant answers.",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "https://platform.openai.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://classroom.google.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "http://localhost:5000/",  
+      "https://platform.openai.com/"
+    ]
+  }
+  
