@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f7f9;
     padding: 10px;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 400px;   /* Increased min-width for popup */
+    max-width: 500px;   /* Increased max-width for popup */
     overflow-x: hidden;
 }
 
@@ -19,6 +19,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
     transition: transform 0.2s;
+    width: 90%; /* Added card width */
 }
 
 .card:hover {
@@ -29,6 +30,7 @@ body {
 .card-title {
     margin-bottom: 10px;
     color: #333;
+    text-align: center;   /* Added to center the heading */
 }
 
 /* New Style added for response container */
@@ -38,7 +40,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
 }
-
+#loading-indicator {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
 .card-response {
     margin-top: 8px;
     padding: 10px;
@@ -46,6 +52,7 @@ body {
     border-radius: 4px;
     color: #333;
     margin-bottom: 0px;
+    position: relative;
 }
 
 .chat-message {

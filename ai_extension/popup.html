@@ -9,22 +9,20 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <div class="popup-container">
-      <div class="card">
-          <h3 class="card-title">Need Help?</h3>
-          <button id="ask-help" class="card-button">Yes, I need help!</button>
-      </div>
-
-    <div id="chat-box" class="card" style="display:none;">
-       <div id="response-container">
-          <div id="response" class="card-response"></div>
-       </div>
-          <div class="input-area">
-              <input type="text" id="user-question" class="card-input" placeholder="Ask your question...">
-              <button id="submit-question" class="card-button">Submit</button>
+    <div class="popup-container">
+      <div id="chat-box" class="card">
+          <h3 class="card-title">Teaching Assistant</h3>
+          <div id="response-container">
+            <div id="response" class="card-response">
+              <div id="loading-indicator" style="display: none;">Loading...</div>
+            </div>
           </div>
+           <div class="input-area">
+            <input type="text" id="user-question" class="card-input" placeholder="Ask your question...">
+            <button id="submit-question" class="card-button">Submit</button>
+           </div>
+      </div>
     </div>
-  </div>
   <script src="popup.js"></script>
 </body>
 </html>

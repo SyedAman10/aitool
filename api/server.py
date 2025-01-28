@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
-from flask_cors import CORS
 
 import openai
 import os
@@ -9,7 +8,6 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-CORS()  # This will allow all origins by default
 
 app = Flask(__name__)
 
@@ -20,7 +18,7 @@ def get_answer():
     
     # Use the chat completions endpoint
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": question},

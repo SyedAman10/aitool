@@ -1,9 +1,13 @@
+
+from dotenv import load_dotenv
 import os
 import json
 import openai
+load_dotenv()
 
 # Set OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # Resolve paths dynamically
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
